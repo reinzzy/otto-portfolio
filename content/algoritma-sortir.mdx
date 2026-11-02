@@ -1,0 +1,36 @@
+---
+title: "Melihat Algoritma Sorting di Dunia Nyata: Catatan dari Gudang Logistik"
+publishedAt: "2026-10-30"
+updatedAt: "2026-10-30"
+author: "Otto Santoso"
+summary: "Menjadi operator sortir logistik membuat saya lebih mengerti konsep efisiensi struktur data."
+image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=192&fit=crop"
+---
+
+# Melihat Algoritma Sorting di Dunia Nyata
+
+Saat kuliah, dosen IT sering menjelaskan *Bubble Sort*, *Merge Sort*, dan *Quick Sort*. Jujur saja, konsep itu kadang terasa terlalu abstrak. Sampai akhirnya, saya bekerja sebagai tenaga lepas (*freelance*) Operator Sortir di **SPX Express**.
+
+Tiba-tiba, konsep *sorting* menjadi sangat nyata dan melelahkan secara fisik.
+
+<MediaContainer
+  src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=1200&fit=crop"
+  alt="Gudang logistik"
+/>
+
+## Sistem "Routing" dan Skala Prioritas
+
+Di gudang, ribuan paket datang bersamaan. Kami tidak bisa memprosesnya secara acak. 
+
+1. **Pemindaian (Scanning):** Membaca *barcode* (seperti membaca ID di *database*).
+2. **Pengelompokan (Grouping):** Memisahkan paket berdasarkan zona rute. Ini mirip dengan fungsi `GROUP BY` di SQL.
+3. **Optimasi Rute:** Kurir harus mendapatkan paket yang rutenya searah.
+
+## Apa yang Saya Pelajari sebagai Developer?
+
+- **Efisiensi O(n) itu Penting:** Jika Anda harus memegang satu paket dua kali karena salah letak, efisiensi gudang hancur. Di kode, *looping* yang tidak perlu akan mematikan *server*.
+- **Penanganan Error (Error Handling):** Paket dengan alamat tidak jelas ibarat *Null Pointer Exception*. Butuh prosedur khusus (SOP) agar seluruh jalur sortir tidak berhenti beroperasi.
+
+## Wrap-up
+
+Logistik adalah implementasi algoritma terbesar di dunia nyata. Pengalaman di SPX Express membuat saya selalu menulis kode dengan memikirkan skalabilitas: *"Apakah kode ini tetap cepat jika datanya bukan 10, melainkan 10.000?"*

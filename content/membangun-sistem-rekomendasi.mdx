@@ -1,0 +1,41 @@
+---
+title: "Membangun Sistem Rekomendasi dengan Laravel dan Knowledge-Based Filtering"
+publishedAt: "2026-10-20"
+updatedAt: "2026-10-20"
+author: "Otto Santoso"
+summary: "Catatan teknis dari tugas akhir saya: Bagaimana mencocokkan preferensi pengguna dengan data menggunakan PHP."
+image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=192&fit=crop"
+---
+
+# Membangun Sistem Rekomendasi dengan Laravel
+
+Untuk tugas akhir di Universitas Duta Bangsa, saya memutuskan untuk menantang diri sendiri: membuat sistem rekomendasi yang cerdas. Alih-alih menggunakan pendekatan kolaboratif biasa, saya menerapkan metode **Knowledge-Based Filtering**.
+
+Metode ini sangat cocok ketika kita memiliki aturan bisnis yang jelas tentang apa yang dibutuhkan pengguna.
+
+## Mengapa Laravel?
+
+Ekosistem Laravel memberikan fondasi yang luar biasa solid. Fitur ORM (Eloquent) membuat query pencarian yang rumit menjadi sintaks yang elegan dan mudah dibaca.
+
+```php
+// Contoh konseptual pencarian berbasis aturan (Knowledge-Based)
+public function getRecommendation(UserPreference $pref) {
+    return Product::query()
+        ->where('category', $pref->category)
+        ->whereBetween('price', [$pref->min_price, $pref->max_price])
+        ->orderByRaw('MATCH(features) AGAINST(?) DESC', [$pref->keywords])
+        ->take(5)
+        ->get();
+}
+```
+
+## Tantangan Terbesar
+
+Tantangan paling menarik adalah mengubah kebutuhan spesifik (seperti "Saya butuh alat yang tahan lama dan murah") menjadi *query database* yang terukur tanpa membuat server *overload*. 
+
+1. **Normalisasi Data:** Memastikan data yang di-*input* seragam.
+2. **Caching:** Menyimpan hasil rekomendasi yang sering dicari menggunakan sistem *cache* agar waktu respons di bawah 200ms.
+
+## Wrap-up
+
+Sistem rekomendasi tidak melulu soal AI atau *Machine Learning* yang berat. Terkadang, memahami logika bisnis dan menggunakan metode *Knowledge-Based* yang dioptimalkan dengan SQL sudah lebih dari cukup untuk memecahkan masalah klien.

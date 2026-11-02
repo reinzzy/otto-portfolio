@@ -1,0 +1,37 @@
+---
+title: "Dari Monolith PHP ke Modern Frontend: Mengapa Saya Menggunakan Next.js"
+publishedAt: "2026-11-02"
+updatedAt: "2026-11-02"
+author: "Otto Santoso"
+summary: "Alasan di balik keputusan saya membangun portofolio ini dengan ekosistem Next.js dan Tailwind CSS."
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=192&fit=crop"
+---
+
+# Dari Monolith PHP ke Modern Frontend
+
+Sebagian besar pengalaman saya berada di dunia *backend* dengan PHP dan MySQL. Namun, untuk portofolio ini, saya ingin sesuatu yang terasa sangat cepat, modern, dan interaktif. Pilihan saya jatuh pada **Next.js**.
+
+## Pergeseran Paradigma
+
+Berpindah dari arsitektur *Monolith* (seperti Laravel Blade) ke arsitektur berbasis komponen (React) membutuhkan sedikit penyesuaian logika.
+
+```tsx
+// Di React/Next.js, UI dibangun dari komponen-komponen kecil
+export function Button({ variant, children }) {
+  return (
+    <button className={`btn-${variant} px-4 py-2 rounded-md`}>
+      {children}
+    </button>
+  );
+}
+```
+
+## 3 Alasan Menyukai Next.js
+
+1. **Kecepatan:** Kemampuan *Static Site Generation* (SSG) membuat halaman web saya memuat niem-instan.
+2. **Tailwind CSS:** Meskipun awalnya kelas-kelas di HTML terlihat berantakan, Tailwind sangat mempercepat proses *styling* tanpa harus bolak-balik file CSS.
+3. **Vercel Deployment:** Pengalaman *deploy* dari GitHub ke *live server* hanya dengan hitungan detik tanpa perlu mengonfigurasi *cPanel* atau VPS.
+
+## Wrap-up
+
+Sebagai seorang pengembang perangkat lunak, memiliki dasar *backend* yang kuat (seperti memahami logika *database* dan API) membuat pembelajaran *frontend modern* menjadi jauh lebih bermakna dan terarah.
