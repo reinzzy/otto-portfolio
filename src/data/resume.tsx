@@ -11,7 +11,7 @@ export const DATA = {
   description:
     "IT Graduate & Full-Stack Web Developer. I love building practical software solutions and fixing things from the terminal up. I have a passion for learning new technologies and applying them to real-world problems. I am currently seeking opportunities to contribute my skills and grow as a developer.",
   summary:
-    "I recently graduated with a Bachelor's in Informatics Engineering (Teknik Informatika) from Universitas Duta Bangsa Surakarta with a 3.79 GPA. My background is rooted in building efficient web applications; I built an accommodation recommendation system using Knowledge-Based Filtering and Laravel for my undergraduate thesis. I have practical experience from a web development internship where I focused on Laravel, bug fixing, and implementing system features. I enjoy working directly with the terminal to resolve dependency issues and build lightweight applications using Livewire and SQLite.",
+    "I recently graduated with a Bachelor's in Informatics Engineering from Universitas Duta Bangsa Surakarta with a 3.79 GPA. My background is rooted in building efficient web applications; I built an accommodation recommendation system using Knowledge-Based Filtering and Laravel for my undergraduate thesis. I have practical experience from a web development internship where I focused on Laravel, bug fixing, and implementing system features. I enjoy working directly with the terminal to resolve dependency issues and build lightweight applications using Livewire and SQLite.",
   avatarUrl: "/me.png",
   skills: [
     { name: "React", icon: SiReact },
@@ -140,7 +140,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "", // Masukkan path gambar screenshot web (misal: "/projects/skripsi.png")
+      image: "/rekomendasi1.jpeg", // Masukkan path gambar screenshot web (misal: "/projects/skripsi.png")
       video: "",
     },
     {
@@ -164,7 +164,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/rsi.jpeg", // Masukkan path gambar screenshot web (misal: "/projects/internship.png")
       video: "",
     },
     {
@@ -188,7 +188,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/cuaca.jpeg",
       video: "",
     },
     {
@@ -211,7 +211,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/kmeans1.jpeg",
       video: "",
     },
     {
