@@ -144,7 +144,7 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Internship Web Application",
+      title: "RSI Simpeg (Internship)",
       href: "https://github.com/Its-Nyxz/RSISimpeg", // Ganti dengan link repo aslimu
       dates: "2025 - 2026",
       active: true,
@@ -199,8 +199,8 @@ export const DATA = {
       description:
         "An analytical project implementing the K-Means clustering algorithm. Designed to process, analyze, and cluster datasets to find patterns and categorize data points efficiently.",
       technologies: [
+        "Python",
         "Data Mining",
-        "Algorithms",
         "K-Means",
         "Data Analysis"
       ],
